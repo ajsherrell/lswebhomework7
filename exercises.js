@@ -22,7 +22,7 @@ function greeting(language) {
 	} else if (language = "English") {
 		return "Hello!";
 	} else if (language = "Spanish") {
-		return "Hola!;
+		return "Hola!";
 	} else {
 		return "Hello!";
 	}
@@ -166,12 +166,11 @@ function addNumbers(numbers) {
 function averageTestScore(testScores) {
   //testScores is an array.  Iterate over testScores and compute the average.
   //return the average
-	var sum = testScores.reduce(add, 0) {
-		function add(a, b) {
+	var sum = testScores.reduce(function(a, b) {
 			return a + b;
-		}
+	}, 0);
 		var avg = sum / testScores.length;
-	}
+	
 	return avg;
 }
 
@@ -180,7 +179,7 @@ function largestNumber(numbers) {
   //return the largest integer
 	var max = numbers.reduce(function(a, b) {
 		return Math.max(a, b);
-	});
+	}, 0);
 	
 }
 
